@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+
+@import 'tailwindcss';
+
+:root {
+  --font-sora: 'Sora';
+  --font-code: 'Fira Code';
+  --font-grotesk: 'Space Grotesk';
+  color-scheme: dark;
+}
+
+/* ========================================
+   Theme
+======================================== */
+
+@theme {
+  /* Colors */
+  --color-color-1: #ac6aff;
+  --color-color-2: #ffc876;
+  --color-color-3: #ff776f;
+  --color-color-4: #7adb78;
+  --color-color-5: #858dff;
+  --color-color-6: #ff98e2;
+
+  --color-stroke-1: #26242c;
+
+  --color-n-1: #ffffff;
+  --color-n-2: #cac6dd;
+  --color-n-3: #ada8c3;
+  --color-n-4: #757185;
+  --color-n-5: #3f3a52;
+  --color-n-6: #252134;
+  --color-n-7: #15131d;
+  --color-n-8: #0e0c15;
+  --color-n-9: #474060;
+  --color-n-10: #43435c;
+  --color-n-11: #1b1b2e;
+  --color-n-12: #2e2a41;
+  --color-n-13: #6c7275;
+
+  /* Fonts */
+  --font-sans: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+
+  --font-code: var(--font-code);
+
+  --font-grotesk: var(--font-grotesk);
+
+  /* Letter spacing */
+
+  --tracking-tagline: 2.4;
+
+  /* Backgrounds */
+
+  --background-image-radial-gradient: radial-gradient(var(--tw-gradient-stops));
+
+  --background-image-conic-gradient: conic-gradient(
+    from 225deg,
+    #ffc876,
+    #79fff7,
+    #9f53ff,
+    #ff98e2,
+    #ffc876
+  );
+
+  /* Z-index */
+
+  --z-1: 1;
+  --z-2: 2;
+  --z-3: 3;
+  --z-4: 4;
+  --z-5: 5;
+}
+/* ========================================
+   Components
+======================================== */
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-[1280px] px-5;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      @apply px-10;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      @apply px-15;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      @apply max-w-[1400];
+    }
+  }
+
+  .h1 {
+    @apply font-semibold
+      text-[48px]
+      leading-[52px]
+      md:text-[44px]
+      md:leading-[52px]
+      lg:text-[52px]
+      lg:leading-[65px]
+      xl:text-[60px]
+      xl:leading-[72px];
+  }
+
+  .h2 {
+    @apply text-[1.75rem]
+      leading-[2.5rem]
+      md:text-[2rem]
+      md:leading-[2.5rem]
+      lg:text-[2.5rem]
+      lg:leading-[3.5rem]
+      xl:text-[3rem]
+      xl:leading-tight;
+  }
+
+  .h3 {
+    @apply text-[2rem]
+      leading-normal
+      md:text-[2.5rem];
+  }
+
+  .h4 {
+    @apply text-[2rem]
+      leading-normal;
+  }
+
+  .h5 {
+    @apply text-2xl
+      leading-normal;
+  }
+
+  .h6 {
+    @apply text-lg
+      font-semibold
+      leading-8;
+  }
+  .body-1 {
+    @apply text-[0.875rem]
+      leading-[1.5rem]
+      md:text-[1rem]
+      md:leading-[1.75rem]
+      lg:text-[1.25rem]
+      lg:leading-8;
+  }
+
+  .body-2 {
+    @apply text-[0.875rem]
+      font-light
+      leading-6
+      md:text-base;
+  }
+
+  .caption {
+    @apply text-sm;
+  }
+
+  .tagline {
+    @apply font-grotesk
+      text-xs
+      font-light
+      uppercase
+      tracking-[0.15em];
+  }
+
+  .quote {
+    @apply font-code
+      text-lg
+      leading-normal;
+  }
+
+  .button {
+    @apply font-code
+      text-xs
+      font-bold
+      uppercase
+      tracking-wider;
+  }
+}
+
+@layer utilities {
+  .tap-highlight-color {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
