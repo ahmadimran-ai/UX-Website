@@ -50,7 +50,7 @@ export const navigation = [
   {
     id: '2',
     title: 'How to use',
-    url: '#how-to-use',
+    url: '#services',
   },
   {
     id: '3',
